@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>My Goals</h1>
+
+
+<h4>You have no goals. Not going to lie, this is a bit sad</h4>
+
+<div id="tasks">
+  <% @tasks.each do |task| %>
+    <%= render task %>
+    <p>
+      <%= link_to "Show this goals", task %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New Goal", new_task_path %>
